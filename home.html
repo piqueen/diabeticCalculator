@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Diabetic Calculator</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Diabetic Calculator <img src="calculator.svg"></h1>
+        
+    </div>
+    <div class="container">
+    <h2>Enter Current Blood Sugar</h2>
+    <p><input type="number" id="bscurrent">mg/dl</p>
+    <div class="calculator">
+        <form>
+            <span>Carb sensitivity
+                <div class="tooltip">
+                    <span class="material-icons">
+                        help_outline</span>
+                    <span class="tooltiptext">Don't know it? Calculate below</span>
+                </div>
+                <input type="number" id="CarbSensitivity" placeholder="0" step="0.01" min="0" max="10"></input>
+            </span>
+            <span>Amount of carbs to eat
+                <input type="number" id="CarbsToEat"></input>
+            </span>
+            <button onclick="CalcRise()">Calculate</button>
+        </form>
+        <h2>Your blood sugar will rise to: </h2><span id="bsafter"></span> mg/dl
+        <h3>Calculate your Carb sensitivity</h3>
+        <span id="CalcCarbSensitivity">
+            <span>Enter Weight </span><input type="number" value="0" id="weight">
+            <button onclick="CalcSensitivity()">Calculate</button>
+        </span>
+        <span><b>Your carb sensitivity is: <b><span id="sensitivitybyweight"><b>-</b></span></span>
+    </div>
+</div>
+<span class="material-icons">favorite_border</span>
+<div class="footer">
+    <p>Disclaimer: Please use this as a reference tool. This tool should not substitute medical advice.</p>
+    <p>Made by a diabetic to help other diabetics.</p>
+    <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</div>
+<script src="home.js"></script>
+</body>
+</html>

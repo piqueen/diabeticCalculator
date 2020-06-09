@@ -1,0 +1,66 @@
+.calculator form {
+    text-align: center;
+}
+
+body{
+    text-align: center;
+}
+.tooltip{
+    position: relative;
+    display: inline-block;
+    border: 1px dotted black;
+}
+
+.tooltip .tooltiptext{
+    visibility: hidden;
+    width: 120px;
+    background-color:lightpink;
+    color: black;
+    text-align: center;
+    border-radius: 3px;
+    position: absolute;
+    
+}
+.tooltip:hover .tooltiptext{
+    visibility: visible ;
+}
+.container{
+    margin: 4% 5% 3% 5%;
+    background-color:#FEEAE6 ;
+    border: 2px solid black ;
+    border-radius: 15px;
+    padding-bottom: 3%;
+    font-family: sans-serif;
+    color: #442C2E;
+}
+#BSrise{
+    font-weight: bold;
+    color: red;
+}
+#CarbsToEat {
+    width: 80px;
+}
+#CalcCarbSensitivity input{
+    width: 80px;
+}
+#bscurrent {
+    width: 80px;
+}
+button{
+    background-color: white;
+    border-style: double;
+    font-weight: bold;
+    border: 2px solid #442C2E;
+}
+.header{
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: salmon;
+    margin: 2% 2% 2% 5%;
+}
+.header img{
+    width: 2%;
+}
+.footer{
+    font-size: small;
+}
