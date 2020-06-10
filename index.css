@@ -1,12 +1,23 @@
 *{
     box-sizing: border-box;
 }
-.calculator form {
-    text-align: center;
-}
 
 body{
     text-align: center;
+}
+.header{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: salmon;
+    margin: 2% 2% 2% 5%;
+    font-size: 1.5em;
+}
+.header img{
+    width: 2%;
+}
+.header div {
+    text-align: center;
+    font-size: small;
 }
 .tooltip{
     position: relative;
@@ -16,7 +27,7 @@ body{
 
 .tooltip .tooltiptext{
     visibility: hidden;
-    width: 120px;
+    width: 100px;
     background-color:lightpink;
     color: black;
     text-align: center;
@@ -27,43 +38,70 @@ body{
 .tooltip:hover .tooltiptext{
     visibility: visible ;
 }
-.container{
-    margin: 4% 5% 3% 5%;
+.containerLeft{
+    margin: 2% 3% 2% 5%;
+    float: left;
     background-color:#FEEAE6 ;
     border: 2px solid black ;
     border-radius: 15px;
-    padding-bottom: 3%;
+    padding: 3%;
     font-family: sans-serif;
     color: #442C2E;
+    width: 40%;
 }
+.containerRight {
+    margin: 2% 5% 2% 3%;
+    float: right;
+    background-color:#FEEAE6 ;
+    border: 2px solid black ;
+    border-radius: 15px;
+    padding: 3%;
+    font-family: sans-serif;
+    color: #442C2E;
+    width: 40%;
+    padding-bottom: 5.5%;
+}
+/* footer{
+
+    margin: 1% 25%;
+    
+} */
 #BSrise{
     font-weight: bold;
     color: red;
 }
-#CarbsToEat {
-    width: 80px;
+#CarbsToEat, #weight, #bscurrent, #CarbSensitivity, #targetBS, #targetCBS, #targetCS {
+    width: 15%;
 }
-#CalcCarbSensitivity input{
-    width: 80px;
+#targetBS, #targetCBS, #targetCS{
+    margin-left: 30px;
+    align-content: center;
 }
-#bscurrent {
-    width: 80px;
+#targetCS{
+    margin-left: 65px;
 }
+#targetBS{
+    margin-left: 38px;
+}
+#insulinTotake, #bsafter, #carbsneeded{
+    font-size: 1em;
+    color: mediumvioletred;
+    font-weight: bold;
+}
+
 button{
     background-color: white;
     border-style: double;
     font-weight: bold;
-    border: 2px solid #442C2E;
+    margin: 10px;
+    width: 40%;
+    border: 1px dotted #442C2E;
+    border-radius: 5px;
 }
-.header{
-    text-align: left;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: salmon;
-    margin: 2% 2% 2% 5%;
+button:hover{
+    background-color: lightpink;
 }
-.header img{
-    width: 2%;
-}
+
 .footer{
-    font-size: small;
+    font-size: small; 
 }

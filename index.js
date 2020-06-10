@@ -5,13 +5,16 @@ function CalcRise() {
     var total = CarbSensitivity * CarbsToEat;
     var bloodsugar= CurrentBS+total;
     var fixed = bloodsugar.toFixed(1);
-    document.getElementById("bsafter").innerHTML=fixed;
-    return fixed;
+    document.getElementById("bsafter").innerHTML=("Your blood sugar will rise to: " + fixed +"mg/dl");
+    var insulinTotake= (CarbsToEat/CarbSensitivity);
+    var fixed2 = insulinTotake.toFixed(1);
+    document.getElementById("insulinTotake").innerHTML=("Insulin recommendation " + fixed2+ " units of insulin");
 }
 
 function CalcSensitivity() {
     var weight = document.getElementById("weight").value;
     var result;
+    //Predetermined values below are from the chart for carb sensitivity
     if (weight == 70) {
         result = 10;
     }
@@ -82,6 +85,24 @@ function CalcSensitivity() {
         }
 
     }
-    document.getElementById("sensitivitybyweight").innerHTML = result;
+    document.getElementById("sensitivitybyweight").innerHTML = ("Your carb sensitivity is: " + result);
     document.getElementById("CarbSensitivity").value = result;
 }    
+
+function CalcTarget(){
+    var currentBS=Number(document.getElementById("targetCBS").value);
+    var targetBS=Number(document.getElementById("targetBS").value);
+    var carbSensitivity = Number(document.getElementById("targetCS").value);
+    var calcTarget= (targetBS-currentBS)/carbSensitivity;
+    var fixed3 = calcTarget.toFixed(1);
+    if(fixed3 < 0){
+        document.getElementById("carbsneeded").innerHTML=("No need! you are fine :)");
+    }
+    else if(fixed3 == Infinity){
+        document.getElementById("carbsneeded").innerHTML=("Please fill out the empty fields");
+    }
+    else{
+        document.getElementById("carbsneeded").innerHTML=("You need to eat aprox: " + fixed3 +" grams");
+    }
+    
+}
