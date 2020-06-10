@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 .calculator form {
     text-align: center;
 }
