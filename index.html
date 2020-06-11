@@ -43,12 +43,22 @@
             <div id="CalcTarget">
                 <h3>Low Blood Sugar?</h3>
                 <p>Check how many carbs you should eat based on your current Blood Sugar</p>
-                <div>Target Blood Sugar <row><input id="targetBS" type="number"></div>
-                </row>
-                <div>Current Blood Sugar <row><input id="targetCBS" type="number"></div>
-                </row>
-                <div>Carb Sensitivity <row><input id="targetCS" type="number"></div>
-                </row>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label for="targetBS"> Blood Sugar </label></td>
+                            <td><input id="targetBS" type="number" name="targetBS"></td>    
+                        </tr>
+                        <tr>
+                            <td><lable for="targetCBS">Current Blood Sugar</lable></td>
+                            <td><input id="targetCBS" type="number" name="targetCBS"></td>
+                        </tr>
+                        <tr>
+                            <td>Carb Sensitivity</td>
+                            <td><input id="targetCS" type="number"></td>
+                        </tr>
+                    </tbody>
+                </table>
                 <button onclick="CalcTarget()">Calculate</button>
                 <div id="carbsneeded"></div>
             </div>

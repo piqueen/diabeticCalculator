@@ -59,7 +59,7 @@ body{
     font-family: sans-serif;
     color: #442C2E;
     width: 40%;
-    padding-bottom: 5.5%;
+    /* padding-bottom: 5.5%; */
 }
 /* footer{
 
@@ -70,10 +70,10 @@ body{
     font-weight: bold;
     color: red;
 }
-#CarbsToEat, #weight, #bscurrent, #CarbSensitivity, #targetBS, #targetCBS, #targetCS {
+#CarbsToEat, #weight, #bscurrent, #CarbSensitivity {
     width: 15%;
 }
-#targetBS, #targetCBS, #targetCS{
+/* #targetBS, #targetCBS, #targetCS{
     margin-left: 30px;
     align-content: center;
 }
@@ -82,7 +82,7 @@ body{
 }
 #targetBS{
     margin-left: 38px;
-}
+} */
 #insulinTotake, #bsafter, #carbsneeded{
     font-size: 1em;
     color: mediumvioletred;
@@ -104,4 +104,11 @@ button:hover{
 
 .footer{
     font-size: small; 
+}
+table, td{
+    text-align: center;
+    margin: 5% 15%;
+}
+td input{
+    width: 45%;
 }
