@@ -10,10 +10,10 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: salmon;
     margin: 2% 2% 2% 5%;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 .header img{
-    width: 2%;
+    width: 1em;
 }
 .header div {
     text-align: center;
