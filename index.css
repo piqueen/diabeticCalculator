@@ -38,34 +38,24 @@ body{
 .tooltip:hover .tooltiptext{
     visibility: visible ;
 }
-.containerLeft{
-    margin: 2% 3% 2% 5%;
-    float: left;
+#containerLeft{
+    margin: 3%;
     background-color:#FEEAE6 ;
     border: 2px solid black ;
     border-radius: 15px;
     padding: 3%;
     font-family: sans-serif;
     color: #442C2E;
-    width: 40%;
 }
-.containerRight {
-    margin: 2% 5% 2% 3%;
-    float: right;
+#containerRight {
+    margin: 3%;
     background-color:#FEEAE6 ;
     border: 2px solid black ;
     border-radius: 15px;
     padding: 3%;
     font-family: sans-serif;
     color: #442C2E;
-    width: 40%;
-    /* padding-bottom: 5.5%; */
 }
-/* footer{
-
-    margin: 1% 25%;
-    
-} */
 #BSrise{
     font-weight: bold;
     color: red;
@@ -73,16 +63,6 @@ body{
 #CarbsToEat, #weight, #bscurrent, #CarbSensitivity {
     width: 15%;
 }
-/* #targetBS, #targetCBS, #targetCS{
-    margin-left: 30px;
-    align-content: center;
-}
-#targetCS{
-    margin-left: 65px;
-}
-#targetBS{
-    margin-left: 38px;
-} */
 #insulinTotake, #bsafter, #carbsneeded{
     font-size: 1em;
     color: mediumvioletred;
@@ -112,3 +92,19 @@ table, td{
 td input{
     width: 45%;
 }
+
+@media (min-width: 700px) {
+    #containerRight{
+        height: 400px;
+        float: right;
+        align-self: left;
+        width: 40%;
+    }
+    #containerLeft{
+        height: 400px;
+        width: 40%;
+        float:left;
+        align-self: left;
+    }
+}
+

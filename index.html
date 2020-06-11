@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Diabetic Calculator</title>
 </head>
 
@@ -15,8 +16,8 @@
             <p><b>FROM ONE DIABETIC TO ANOTHER</b></p>
         </div>
     </div>
-    <div class="maincontent">
-        <div class="containerLeft">
+    <!-- <div class="row"> -->
+        <div class="sm-col-6 xs-col-6 xxs-col-12 lg-col-6 md-col-6 xl-col-6" id="containerLeft">
             <h3>Enter Current Blood Sugar <input type="number" id="bscurrent">mg/dl</h3>
             <span>Carb sensitivity
                 <div class="tooltip">
@@ -39,7 +40,7 @@
             </div>
             <span id="sensitivitybyweight"><b></b></span></span>
         </div>
-        <div class="containerRight">
+        <div class="sm-col-6 xs-col-6 xxs-col-12 lg-col-6 md-col-6 xl-col-6" id="containerRight">
             <div id="CalcTarget">
                 <h3>Low Blood Sugar?</h3>
                 <p>Check how many carbs you should eat based on your current Blood Sugar</p>
@@ -63,7 +64,7 @@
                 <div id="carbsneeded"></div>
             </div>
         </div>
-    </div>
+    <!-- </div> -->
     <script src="index.js"></script>
 </body>
 
