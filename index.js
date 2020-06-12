@@ -5,10 +5,21 @@ function CalcRise() {
     var total = CarbSensitivity * CarbsToEat;
     var bloodsugar= CurrentBS+total;
     var fixed = bloodsugar.toFixed(1);
-    document.getElementById("bsafter").innerHTML=("Your blood sugar will rise to: " + fixed +"mg/dl");
     var insulinTotake= (CarbsToEat/CarbSensitivity);
     var fixed2 = insulinTotake.toFixed(1);
+    if(CarbSensitivity== 0 || CarbSensitivity == " " || CarbSensitivity==NaN){
+        document.getElementById("bsafter").innerHTML=("Please fill out the blanks");
+    }
+    else if(CarbsToEat== 0 || CarbsToEat == " " || CarbsToEat==NaN){
+        document.getElementById("bsafter").innerHTML=("Please fill out the blanks");
+    }
+    else if(CurrentBS== 0 || CurrentBS == " " || CurrentBS==NaN){
+        document.getElementById("bsafter").innerHTML=("Please fill out the blanks");
+    }
+    else {
+    document.getElementById("bsafter").innerHTML=("Your blood sugar will rise to: " + fixed +"mg/dl");
     document.getElementById("insulinTotake").innerHTML=("Insulin recommendation " + fixed2+ " units of insulin");
+    }
 }
 
 function CalcSensitivity() {
@@ -85,8 +96,14 @@ function CalcSensitivity() {
         }
 
     }
-    document.getElementById("sensitivitybyweight").innerHTML = ("Your carb sensitivity is: " + result);
-    document.getElementById("CarbSensitivity").value = result;
+    if(weight== 0 || weight == " " || weight==NaN){
+        document.getElementById("sensitivitybyweight").innerHTML = ("Please fill out the blanks");
+    }
+    else{
+        document.getElementById("sensitivitybyweight").innerHTML = ("Your carb sensitivity is: " + result);
+        document.getElementById("CarbSensitivity").value = result;
+    }
+
 }    
 
 function CalcTarget(){
@@ -101,8 +118,16 @@ function CalcTarget(){
     else if(fixed3 == Infinity){
         document.getElementById("carbsneeded").innerHTML=("Please fill out the empty fields");
     }
+    else if(currentBS == 0 || currentBS == " " || currentBS==NaN){
+        document.getElementById("carbsneeded").innerHTML=("Please fill out the empty fields");
+    }
+    else if(targetBS == 0 || targetBS == " " || targetBS==NaN){
+        document.getElementById("carbsneeded").innerHTML=("Please fill out the empty fields");
+    }
+    else if(carbSensitivity == 0 || carbSensitivity == " " || carbSensitivity==NaN){
+        document.getElementById("carbsneeded").innerHTML=("Please fill out the empty fields");
+    }
     else{
         document.getElementById("carbsneeded").innerHTML=("You need to eat aprox: " + fixed3 +" grams");
-    }
-    
+    }   
 }
